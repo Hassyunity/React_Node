@@ -16,6 +16,7 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.18",
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.29",
     "ts-node": "^10.9.2",

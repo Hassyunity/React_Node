@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/product.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function ProductAdmin() {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState('');
@@ -8,23 +10,22 @@ export default function ProductAdmin() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('/api/products')
+    fetch(`${API_URL}/products`)
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => {
         console.error('Erreur chargement produits:', err);
-        setError("⚠️ Serveur indisponible.");
+        setError("Serveur indisponible.");
       });
   }, []);
 
-  // Add product
   const handleAddProduct = () => {
     if (!name || !price) {
       alert('Veuillez remplir le nom et le prix');
       return;
     }
 
-    fetch('/api/products', {
+    fetch(`${API_URL}/products`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, price: parseFloat(price) }),
@@ -41,9 +42,8 @@ export default function ProductAdmin() {
       .catch(err => alert(err.message));
   };
 
-  // Delete product
   const handleDeleteProduct = (id) => {
-    fetch(`/api/products/${id}`, { method: 'DELETE' })
+    fetch(`${API_URL}/products/${id}`, { method: 'DELETE' })
       .then(res => {
         if (res.status === 204) {
           setProducts(prev => prev.filter(p => p.id !== id));

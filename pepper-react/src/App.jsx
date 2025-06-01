@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './partials/Navbar.jsx';
 import NewsLetter from './components/news_letter.jsx';
 import ComingSoon from './partials/coming.jsx';
+import AdminPanel from './pages/AdminPanel.jsx';
 
 function Accueil() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/" element={<Accueil />} />
         <Route path="/mon-compte" element={<MonCompte />} />
         <Route path="/support-reseau" element={<SupportReseau />} />
+        <Route path="/admin-produits" element={<AdminPanel />} /> 
       </Routes>
     </Router>
   );

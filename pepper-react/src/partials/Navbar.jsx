@@ -16,6 +16,11 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/admin-produits" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Admin Produits(API REST)
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/mon-compte" className={({ isActive }) => (isActive ? 'active' : '')}>
             Mon Compte
           </NavLink>

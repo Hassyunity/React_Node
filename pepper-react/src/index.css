@@ -24,12 +24,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-color, #242424);
 }
+
 
 h1 {
   font-size: 3.2em;

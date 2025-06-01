@@ -16,19 +16,18 @@ Ce projet est une application de gestion de produits composée de deux parties d
     └── README.md
 
 
----
-
+```bash
 ## 🚀 Lancer le projet en local
 
 ### 1. Backend – Node.js
 
 Dans le dossier `backend`, installe les dépendances et lance le serveur :
-
+---
 ```bash
 npm install
 npx ts-node server.ts
 
-### 1. Front-end – Vite + React
+### 2. Front-end – Vite + React
 
 ```bash
 npm install

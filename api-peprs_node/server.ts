@@ -20,6 +20,10 @@ app.get('/products', (req: Request, res: Response) => {
   res.json(products);
 });
 
+app.get('/ping', (req: Request, res: Response) => {
+  res.send('pong');
+});
+
 app.post('/products', (req: Request, res: Response) => {
   const { name, price } = req.body;
   const newProduct: Product = {
@@ -37,6 +41,8 @@ app.delete('/products/:id', (req: Request, res: Response) => {
   res.status(204).send();
 });
 
-app.listen(3001, () => {
-  console.log('API en cours sur http://localhost:3001');
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+  console.log(`API en cours sur http://localhost:${PORT}`);
 });

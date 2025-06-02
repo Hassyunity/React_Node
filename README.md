@@ -33,6 +33,10 @@ npx ts-node server.ts
 npm install
 npm run dev
 
+### 3. start front-end and backend
+```bash
+npm run start:all
+
 ## Fonctionnalités
 
 - 📦 Affichage de la liste des produits depuis l'API jsonplaceholder.typicode.com  

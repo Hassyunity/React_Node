@@ -1,0 +1,23 @@
+{
+  "name": "test_technique",
+  "version": "1.0.0",
+  "description": "Ce projet est une application de gestion de produits composée de deux parties distinctes :",
+  "main": "code_reviews.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:all": "concurrently \"cd api-peprs_node && npx ts-node server.ts\" \"cd pepper-react && npm run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hassyunity/React_Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hassyunity/React_Node/issues"
+  },
+  "homepage": "https://github.com/Hassyunity/React_Node#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
